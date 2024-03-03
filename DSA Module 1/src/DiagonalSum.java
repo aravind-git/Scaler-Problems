@@ -4,28 +4,24 @@ import java.util.HashMap;
 
 public class DiagonalSum {
     public static void main(String[] args) {
+        /*
+        For a Diagonal the i and j are same. We need to check if the row and col are same and do the Sum
+         */
+        ArrayList<ArrayList<Integer>> A = new ArrayList<>();
 
-        ArrayList<Integer> A = new ArrayList<>();
-        ArrayList<Integer> B = new ArrayList<>();
-        ArrayList<Integer> c = new ArrayList<>();
-        A.add(10);
-        A.add(20);
-        A.add(30);
-        A.add(30);
-        HashMap<Integer,Integer> hashMap = new HashMap<>();
-        B.add(20);
-        B.add(30);
-        Collections.reverse(A);
-            for(int a:A){
-                if(hashMap.containsKey(a)){
-                    hashMap.put(a,hashMap.get(a)+1);
-                }else{
-                    hashMap.put(a,1);
-                }
-            }
-            for(int b:B){
-
-                c.add(hashMap.get(b));
-            }
+        // Create n lists one by one and append to the
+        // master list (ArrayList of ArrayList)
+        ArrayList<Integer> a1 = new ArrayList<>();
+        a1.add(1);
+        a1.add(2);
+        A.add(a1);
+        ArrayList<Integer> a2 = new ArrayList<>();
+        a2.add(5);
+        a2.add(20);
+        A.add(a2);
+        ArrayList<Integer> a3 = new ArrayList<>();
+        a3.add(10);
+        a3.add(20);
+        A.add(a3);                                
     }
 }

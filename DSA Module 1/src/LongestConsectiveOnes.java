@@ -20,7 +20,6 @@ public class LongestConsectiveOnes {
         for(int i=0;i<len;i++){
             if(A.charAt(i)=='0'){
                 int count =0,l=0,r=0,j=i+1,k=i-1;
-
                 while(j<len && A.charAt(j)=='1'){
                     r++;
                     j++;
