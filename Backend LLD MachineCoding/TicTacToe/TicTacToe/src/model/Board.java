@@ -40,10 +40,32 @@ public class Board {
     public String toString() {
         for(int i=0;i<N;i++){
             for(int j=0;j<N;j++){
-                System.out.print(cells.get(i).get(j).cellState+" ");
+                if(cells.get(i).get(j).cellState == CellState.OCCUPIED){
+                    System.out.print(cells.get(i).get(j).player.symbol);
+                }
+                else if(cells.get(i).get(j).cellState == CellState.FREE){
+                    System.out.print("|");
+                }
+
             }
             System.out.println();
+
         }
         return "";
+    }
+    public void displayGameState(){
+        for(int i=0;i<N;i++){
+            for(int j=0;j<N;j++){
+                if(cells.get(i).get(j).cellState == CellState.OCCUPIED){
+                    System.out.print(cells.get(i).get(j).player.symbol);
+                }
+                else if(cells.get(i).get(j).cellState == CellState.FREE){
+                    System.out.print("|");
+                }
+
+            }
+            System.out.println();
+
+        }
     }
 }

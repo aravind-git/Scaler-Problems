@@ -27,6 +27,8 @@ public abstract class Player {
     }
 
     String name;
-    Character symbol;
+    Character symbol ;
     int id;
+
+    public abstract Move makeMove(Board board);
 }

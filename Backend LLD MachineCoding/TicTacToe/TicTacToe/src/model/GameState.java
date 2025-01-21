@@ -4,6 +4,8 @@ public enum GameState {
     COMPLETED,
     PAUSED,
     DRAW,
-    INITIALIZED
+    ONSGOING,
+    INITIALIZED,
+    STARTED
 }
 
